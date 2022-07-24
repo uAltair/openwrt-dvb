@@ -35,27 +35,6 @@ define Package/generic-dib0700/install
 endef
 $(eval $(call BuildPackage,generic-dib0700))
 
-
-define Package/generic-it9135
-  SECTION := dvb-devices
-  CATEGORY := DVB devices
-  SUBMENU := Terrestrial (DVB-T/T2)
-  TITLE := ITE 9135 based
-  DEPENDS := +it9135-firmware +kmod-dvb-af9033 +kmod-dvb-usb-af9035 +kmod-media-tuner-it913x
-endef
-
-define Package/generic-it9135/description
- Supported:
- HDTV USB DVB-T dongle,
- WandTV DVB-T digital terrestrial TV stick (EzTV869 1.0).
-endef
-
-define Package/generic-it9135/install
-	$(INSTALL_DIR) $(1)/etc
-endef
-$(eval $(call BuildPackage,generic-it9135))
-
-
 define Package/tt-ct-4650-ci
   SECTION := dvb-devices
   CATEGORY := DVB devices
